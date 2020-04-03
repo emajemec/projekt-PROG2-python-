@@ -1,0 +1,257 @@
+\documentclass[12pt]{article}
+ \usepackage[utf8]{inputenc}
+  \usepackage[slovene]{babel}
+\usepackage{amsthm,amsfonts,amsmath,amssymb,url}
+
+\textheight 210 true mm
+\textwidth 146 true mm
+\voffset=-17mm
+\hoffset=-13mm
+
+\newtheorem{Izrek}{{\sc Izrek}}[section]
+\newtheorem{Trditev}[Izrek]{{\sc Trditev}}
+\newtheorem{Posledica}[Izrek]{{\sc Posledica}}
+\newtheorem{Definicija}[Izrek]{{\sc Definicija}}
+\newtheorem{Domneva}[Izrek]{{\sc Domneva}}
+\newtheorem{Zgled}[Izrek]{{\sc Zgled}}
+
+\def\theIzrek{{\rm \arabic{section}.\arabic{Izrek}}}
+
+\newenvironment{izrek}{\begin{Izrek}\sl}{\end{Izrek}}
+\newenvironment{trditev}{\begin{Trditev}\sl}{\end{Trditev}}
+\newenvironment{posledica}{\begin{Posledica}\sl}{\end{Posledica}}
+\newenvironment{definicija}{\begin{Definicija}\rm }{\end{Definicija}}
+\newenvironment{domneva}{\begin{Domneva}\sl }{\end{Domneva}}
+\newenvironment{zgled}{\begin{Zgled}\sl }{\end{Zgled}}
+
+\newenvironment{dokaz}[1][{\sc Dokaz}]{\begin{proof}[#1]\renewcommand*{\qedsymbol}{\(\blacksquare\)}}{\end{proof}}
+
+\newcommand{\Mod}[1]{\hbox{ (mod } #1)}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+\begin{Large}
+{\bf Mersennova števila}
+\end{Large}
+\\[5mm]
+\begin{large}
+Pisni izdelek pri predmetu {\em Komuniciranje v matematiki}
+\\[5mm]
+{\sc Katarina Abramič}
+\\[10mm]
+13.~april, 2018
+\end{large}
+
+\end{center}
+
+\newpage
+\setcounter{page}{1}
+
+\section{Uvod}
+Števila so poleg množic in funkcij ena najpomembnejših matematičnih pojmov; z drugo besedo so števila temelj, na katerem stoji matematika.
+\newline 
+Poznamo veliko različnih števil, med njimi so tudi takšna, ki imajo posebne oblike. Vzemimo število oblike $2^n - 1$, pri čemer je $n$ naravno število\footnote{Naravna števila so števila s katerimi štejemo.} večje od $1$. Takšnim številom pravimo {\em Mersennova števila}, ki so svoje ime dobila po francoskem redovniku {\em Marinu Mersennu}\footnote{Marin Mersenne (1588, 1648). Rojen v francoskem kraju Oize. Bil je mislec, filozof, fizik in matematik. Izobraževal se je na jezuitskem kolegiju v La Flecheju, kjer je bil Descartesov sošolec in prijatelj. Umrl je v Parizu.} iz 17.~stoletja. 
+\begin{definicija}
+Praštevila oblike $2^n-1$ imenujemo Mersennova praštevila.
+\end{definicija}
+V predgovoru svoje knjige {\em Cogita Physico-Mathematica}, ki je izšla leta $1644$, je Mersenne zapisal, da je število 
+\begin{center}
+$M_n = 2^n -1 $
+\end{center}
+praštevilo za $n = 2, 3, 5, 7, 13, 17, 19, 31, 67, 127, 257$ in sestavljeno število za vse druge $n$, manjše od $257$.
+
+Kako je prišel do tega? Nihče ne ve; nekaj pa le drži. Bil je zelo blizu resnice. V njegovem času je bilo znanih le 7 Mersennovih praštevil, in sicer za $n=2,3,5,7,13,17$ in $19$. Naslednje Mersennovo praštevilo je odkril {\em Leonhard Paul Euler} \footnote{Leonhard Paul Euler (1707, 1783). Rojen v Švici. Po poklicu je bil matematik, fizik in astronom. Umrl pa je v Rusiji.}, ki je leta 1750 pokazal, da je  $M_{31}=2147483647$ res praštevilo. Ta njegova trditev je veljala vse do leta 1880, ko je bilo odkrito spet novo praštevilo.
+\newline
+Merssennovo trditev so lahko preverili šele leta $1947$, ko so se pojavila dobra računala. Takrat so ugotovili, da je napravil le pet napak. Ugotovili so, da $M_{67}$ in $M_{257}$ nista praštevili, $M_{61}$, $M_{89}$ ter $M_{107}$ pa so praštevila.
+
+
+\section{Mersennova praštevila}
+Osnovna zamisel je poiskati vrednost $n$, pri kateri je $M_n$ praštevilo. Ampak tudi pri večini praštevil $n$ dobimo za Mersennovo število $M_n$ sestavljeno število. Zato iskanje ustreznih vrednosti za $n$, da bi dobili Mersennovo praštevilo, ni enostavno.
+Prvi štirje primeri: 
+\newpage
+\begin{center}
+$M_2=2^2-1=3$,
+\end{center}
+\begin{center}
+$M_3=2^3-1=7,$
+\end{center}
+\begin{center}
+$M_5=2^5-1=31,$
+\end{center}
+\begin{center}
+$M_7=2^7-1=127,$
+\end{center}
+so sama praštevila. 
+\newline
+Ko pa vzamemo $n=11$,
+
+\begin{center}
+$M_{11}=2^{11}-1=2047=23\cdot89$
+\end{center}
+dobimo sestavljeno število. Nato sledijo spet 3 praštevilske vrednosti:
+\begin{center}
+$M_{13}=8191$, $M_{17}=131071$, $M_{19}=524287.$
+\end{center}
+
+Ko za $n$ vzamemo vedno večja praštevila, vedno težje najdemo Mersennova praštevila, saj je znano, da Mersennovo število $M_n$ ne morem biti praštevilo, če $n$ ni praštevilo.
+
+\begin{domneva}
+ Mersennovih praštevil je neskončno mnogo.
+\end{domneva}
+Domneva je še odprta (ni niti dokazana niti ovržena).
+\begin{izrek}
+Če je Mersennovo število $M_n$ praštevilo, je tudi $n$ praštevilo.
+\end{izrek}
+\begin{dokaz}
+Zapišimo $n$ v obliki $n=pq$, kjer je $q$ praštevilo. Izrek bo dokazan, če dokažemo, da je $p=1$. Sedaj upoštevamo, da je $n=pq$. Tedaj dobimo:
+\begin{center}
+$2^n-1=(2^p-1)(1+2^p+2^{2p}+\ldots+2^{(q-1)p})$
+\end{center}
+Število $2^n-1$ smo sedaj zapisali v obliki produkta dveh naravih števil. Ker je $2^n-1$ praštevilo in je očitno, da je $q>1$, mora biti $p=1.$
+\newline
+Dokazali smo, da je $n$ praštevilo, če je $2^n-1$ praštevilo.
+\end{dokaz} 
+Mersennova praštevila so v tesni zvezi s {\em prijateljskimi števili} 
+\begin{definicija}
+Prijateljski števili sta celi števili za kateri velja, da je vsota pravih deliteljev prvega števila enaka drugemu številu, in obratno.
+\end{definicija}
+\begin{definicija}
+Pravi delitelj je delitelj celega števila $n$, ki se razlikuje od $n$.
+\end{definicija}
+Vsako sodo prijateljsko število se namreč izraža na način $2^{n-1}M_n$, pri čemer je $M_n$ Mersennovo praštevilo. 
+\begin{zgled}
+Za primer vzemimo najmanjši prijateljski par, števili 220 in 284. Množica pravih deliteljev števila 220 je ${1,2,4,5,10,11,20,22,44,55,110}$, njihova vsota pa je enaka 284. Množica pravih deliteljev števila 284 je ${1,2,4,71,142}$, katere vsota je enaka 220.
+\end{zgled}
+
+\section{Zanimivost}
+\ Že v Antični Grčiji so poznali $4$ Mersennova praštevila, sam Mersenne pa jih je v svojem času odkril $7$.
+\ Do sedaj je odkritih 50 Mersennovih praštevil, med odkritimi Mersennovimi števili pa lahko ležijo še neodkrita, saj eksponentov ne preverjajo po vrsti. Zadnje praštevilo je odkril, $51\-$ letni Američan, Jonathan Pace. Po štirinajstih letih vstrajanja, ga je odkril 26.~decembra, 2017. Novo odkrito praštevilo je $2^{77,232,917}-1$, ki ima v desetiškem sestavu kar 23.249.425 mest. 
+\newline
+\newline
+\ Mersennova praštevila odkrivajo s pomočjo {\em projekta GIMPS} \footnote{Projekt je ustanovil George Woltman.}, pri katerem računalniki izberejo naključen eksponent $n$, ki je tudi praštevilo. GIMPS (Great Internet Mersenne Prime Search) je skupni projekt prostovoljcev, ki uporabljajo prosto dostopno programsko opremo za iskanje Mersennovih praštevil.  
+\newline
+\newline
+Praštevila pa odkrivajo tudi s pomočjo {\em Lucas-Lehmerjevega testa} \footnote{Edouard Lucas(1842, 1891). Bil je matematik, delal pa je v Pariškem observatoriju, kasneje je postal profesor matematike v Parizu. Služil je tudi v vojski. Derrick Henty Lehmer (1905, 1991). Bil je ameriški matematik, ki je izpopolnil delo Edouarda Lucasa.} , s katerim preverijo, ali je dobljeno število praštevilo.
+
+\section{Lucas-Lehmerjev algoritem}
+Ali je število $2^n-1$ praštevilo, preverimo z Lucas-Lehmerjevim algoritmom.
+\newline
+Najprej definirajmo rekurzivno \footnote{Pri rekurzivnem zaporedju podamo nekaj začetnih členov in formulo, ki pove, kako se $n$-ti člen izraža s prejšnjimi členi.} Lucas-Lehmerjevo zaporedje: $s_0=4$ in 
+\newline
+$s_i=s^2_{i-1}-2$, pri katerem so prvi členi zaporedja enaki 4, 14, 194, 37634.
+\newline
+Algoritem temelji na naslednjem izreku:
+\begin{izrek}
+Naj bo $n$ praštevilo večje od 2. Če je $s_{n-2}\equiv0$ \ (mod \ $M_n$), potem je $M_n$ praštevilo.
+\end{izrek}
+Dokaza izreka ne bom navedla, najde pa se ga v knjigi Enciklopedija števil na straneh 445 - 449.
+\begin{zgled}
+Z Lucas-Lehmerjevim algoritmom preverimo, ali je število $2^5-1$ praštevilo.
+\newline
+$M_5=2^5-1=31$. Zaporedje računamo do $n=5-2=3$ po modulu 31.
+\newline
+\newline
+\begin{tabular}{||c|l|r||}
+\hline
+$i$ & $s_i$ \ (mod \ 31) & Kako računamo člene zaporedja \\
+\hline
+0 & 4 & $4=31\cdot 0+4$  \\
+\hline
+1 & 14 & $4^2-2=14=31\cdot 0+14$ \\
+\hline
+2 & 8 & $14^2-2=194=31\cdot 6+8$ \\
+\hline
+3 & 0 & $8^2-2=62=31\cdot 2+0$ \\
+\hline
+\end{tabular}
+\newline
+\newline
+Ker je $s_3\equiv0$ (mod \ 31), sledi, da je $31$ res praštevilo.
+\end{zgled}
+
+\begin{zgled}
+Z Lucas-Lehmerjevim algoritmom preverimo, ali je število $2^7-1$ praštevilo.
+\newline
+$M_7=2^7-1=127$. Zaporedje računamo do $n=7-2=5$ po modulu 127.
+\newline
+\newline
+\begin{tabular}{||c|l|r||}
+\hline
+$i$ & $s_i$\ (mod \ 127) & Kako računamo člene zaporedja \\
+\hline
+0 & 4 & $4=127\cdot 0+4$ \\
+\hline
+1 & 14 & $4^2-2=14=127\cdot 0+14$ \\
+\hline
+2 & 67 & $14^2-2=194=127\cdot 1+67$ \\
+\hline
+3 & 42 & $67^2-2=4487=127\cdot 35+42$ \\
+\hline
+4 & 111 & $42^2-2=1762=127\cdot 13+111$ \\
+\hline
+5 & 0 & $111^2-2=12319=127\cdot 97+0$ \\
+\hline
+\end{tabular}
+\newline
+\newline
+Ker je $s_5\equiv0$\ (mod \ 127), sledi, da je $127$ res praštevilo.
+\end{zgled}
+\begin{zgled}
+Z Lucas-Lehmerjevim algoritmom pokažimo, da je število $2^{11}-1$ sestavljeno.
+\newline
+$M_{11}=2^{11}-1=2047$. Zaporedje računamo do $n=11-2=9$ po modulu 2047.
+\newline
+\newline
+\begin{tabular}{||c|l|r||}
+\hline
+$i$ & $s_i$ \ (mod \ 2047) & Kako računamo člene zaporedja \\
+\hline
+0 & 4 & $4=2047\cdot 0+4$ \\
+\hline
+1 & 14 & $4^2-2=14=2047\cdot 0+14$ \\
+\hline
+2 & 194 & $14^2-2=194=2047\cdot 0+194$ \\
+\hline
+3 & 788 & $194^2-2=37634=2047\cdot 18+788$ \\
+\hline
+4 & 701 & $788^2-2=620942=2047\cdot 303+701$ \\
+\hline
+5 & 119 & $701^2-2=491399=2047\cdot 204+199$ \\
+\hline
+6 & 1877 & $119^2-2=14159=2047\cdot 6+1877$ \\
+\hline
+7 & 240 & $1877^2-2=3523127=2047\cdot 1721+240$ \\
+\hline
+8 & 282 & $ 240^2-2=57598=2047\cdot 28+282$ \\
+\hline
+9 & 1736 & $282^2-2=79522=2047\cdot 38+1736$ \\
+\hline
+\end{tabular}
+\newline
+\newline
+Ker $s_9\ne0$\ (mod \ 2047), pomeni, da je to število sestavljeno. 2047 lahko zapišemo kot produkt števil $23\cdot 89$.
+\end{zgled}
+\newpage
+\section{Viri in literatura}
+\begin{itemize}
+\item
+J. \ Grasselli, {\em Enciklopedija števil} [Mersennova števila, Mersennova praštevila, Prijateljska števila], DMFA-založništvo, Ljubljana (2008).
+\item
+K. \ Devlin, {\em Nova zlata doba matematike} [1. \ poglavje: Praštevila, razcepljanje in tajnopisi], DMFA-založništvo, Ljubljana (1993).
+\item
+M.\ Chubellier, J.\ Sip, {\em Zgodovina matematike, zgodbe o problemih}[1. \ poglavje: Praštevila], DMFA-založništvo, Ljubljana (2000)
+\item
+Sodelavci Wikipedie, "Mersenne prime" {\em Wikipedia, The Free Encyclopedia}, \url{https://en.wikipedia.org/wiki/Mersenne_prime} (ogled: 7.~april, 2018).
+\item
+U. \ Kržan, {\em Mersennova praštevila in Lucas-Lehmerjev algoritem}, \url{http://www.nauk.si/materials/6755/out/#state=1} (ogled: 7.~april, 2018).
+\item
+E. \ Žagar, {\em Zapiski pri predmetu Proseminar B}, \url{http://studentski.net/gradivo/ulj_fmf_ma2_prb_sno_zapiski_01?r=1}, (ogled: 7.~april, 2018).
+\item
+M. \ Huš, {\em Okrili največje doslej znano praštevilo}, \url{https://slo-tech.com/novice/t714969} (ogled: 7.~april, 2018).
+\item
+Ciril Petr, "Odkrito največje (Mersennovo) praštevilo", {\em PRESEK, list za mlade matematike, fizike, astronome in računalničarje}, \url{http://www.presek.si/31/1575-Petr.pdf} (ogled: 10.~april, 2018).
+
+\end{itemize}
+
+\end{document}

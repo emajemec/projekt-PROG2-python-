@@ -1,0 +1,64 @@
+Neven-Ljubljana-['biologija', 'kemija', 'kitara']-22-20-285-2060
+Sašo-Ljubljana-['ekonomija', 'matematika', 'politièna ekonomija', 'statistika']-36-55-400-4000
+Tilen-Ljubljana-['spletni marketing']-0-90-5-140
+Janez-Domžale-['fizika', 'matematika']-2-86-70-320
+Jasminka-Ljubljana-['anglešèina']-24-57-175-1420
+Sabina-Ljubljana-['biologija']-2-54-5-50
+Mojca-Ljubljana-['francošèina', 'nemšèina', 'slovenšèina']-4-53-100-750
+Tamara-Kamnik-['fizika', 'matematika']-5-51-290-2090
+Ana-Ljubljana-['italijanšèina', 'zgodovina']-11-48-90-960
+Simona-Ptuj-['kemija', 'matematika']-4-46-85-240
+Kaja-Ljubljana-['nemšèina']-24-41-95-710
+Martin-Postojna-['elektrotehnika', 'fizika', 'kemija', 'matematika', 'statistika']-22-28-250-1510
+Taj-Ljubljana-['fizika', 'matematika']-9-6-145-980
+Klara-Novo mesto-['Access', 'ekonomija', 'Excel', 'raèunovodstvo', 'statistika']-5-0-30-110
+Nina-Gorišnica-['glasba', 'klavir']-0-98-5-90
+Boris-Tržiè-['matematika']-4-88-95-340
+Edina-Ljutomer-['matematika']-3-80-20-50
+Matic-Tržiè-['fizika', 'matematika']-4-67-40-130
+Nuša-Ljubljana-['anglešèina', 'sociologija']-8-56-45-350
+Eva-Borovnica-['matematika']-15-55-65-550
+Matej-Ljubljana-['glasba', 'klavir']-7-48-30-200
+Timen-Ljubljana-['kitara', 'matematika', 'programiranje']-2-42-25-90
+Daniela-Solkan-['italijanšèina']-1-42-35-130
+Rastko-Ljubljana-['Excel', 'matematika', 'statistika', 'Word']-12-41-135-950
+Ana-Kranj-['biologija', 'kemija']-19-39-55-200
+Marko-Celje-['Excel', 'matematika', 'Word']-3-36-75-190
+Blaž-Ljubljana-['kemija', 'matematika']-6-30-55-360
+Matic-Ljubljana-['latinšèina', 'umetnostna zgodovina']-12-27-35-300
+Klemen-Ljubljana-['fizika', 'matematika']-5-25-35-150
+Jan-Ljubljana-['informatika', 'programiranje']-10-25-35-300
+Jaka-Maribor-['matematika']-2-23-60-390
+Tadej-Maribor-['informatika', 'programiranje']-9-20-125-390
+Maja-Ljubljana-['španšèina']-7-15-30-240
+Polona-Medvode-['kemija']-5-12-35-330
+Katerina-Ljubljana-['anglešèina', 'fizika', 'španšèina']-12-11-105-790
+Grega-Ljubljana-['fizika', 'kemija']-9-10-75-700
+Maja-Kranj-['kemija']-2-9-25-70
+Klemen-Ljubljana-['matematika']-11-0-40-200
+Andrijan-Ljubljana-['anglešèina']-0-0-5-70
+Žiga-Maribor-['AutoCAD', 'fizika']-5-88-95-240
+Žan-Ljubljana-['matematika', 'programiranje', 'statistika']-3-54-110-400
+Tina-Ivanèna Gorica-['biologija', 'kemija']-8-51-60-550
+Jakob-Ljubljana-['fizika']-8-46-35-190
+Bojana-Ljubljana-['matematika']-10-45-105-700
+Tina-Ljubljana-['nemšèina']-4-0-35-130
+Andreja-Miklavž na Dravskem polju-['slovenšèina']-3-98-15-50
+Jasna-Ljubljana-['anglešèina', 'slovenšèina', 'sociologija', 'španšèina']-10-93-250-810
+Aljaž-Izola-['italijanšèina']-1-81-10-60
+Urban-Lenart-['fizika', 'kemija']-0-80-5-50
+Lara-Ljubljana-['flavta', 'slovenšèina', 'zgodovina']-5-60-25-140
+Luka-Ljubljana-['fizika', 'matematika']-4-59-25-140
+Luka-Maribor-['kemija']-1-55-5-50
+Lara-Dolenjske Toplice-['anglešèina']-1-52-10-80
+Urška-Ljubljana-['italijanšèina']-1-49-10-50
+Sham-Ljubljana-['elektrotehnika', 'fizika', 'matematika']-6-46-15-80
+Ema-Škofja Loka-['matematika']-3-41-35-190
+Mirjam-Ljubljana-['biologija', 'kemija']-0-39-5-50
+Zala-Ljubljana-['anglešèina']-1-35-10-70
+Rok-Ribnica-['matematika']-2-30-10-50
+Blaž-Ljubljana-['matematika']-1-20-15-110
+Ema-Žirovnica-['matematika']-0-19-25-140
+Timi-Brezovica pri Ljubljani-['geografija', 'kemija']-1-13-5-50
+Sašo-Ljubljana-['geografija']-5-0-15-50
+Tjaša-Šentjanž pri Dravogradu-['matematika']-7-71-35-270
